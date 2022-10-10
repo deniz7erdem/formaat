@@ -11,11 +11,11 @@ export default {
 
 
 <template>
-    <div class="card bg-light" style="width: 100%;">
+    <div class="card bg-light">
         <div class="card-body">
             <h5 class="card-title">{{category}}</h5>
             <div class="row">
-                <div v-for="it in item" class="col-md-2">
+                <div v-for="it in item" class="col-lg-2 col-md-3">
                     <Item :it="it"></Item>
                 </div>
             </div>

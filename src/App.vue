@@ -8,6 +8,13 @@ export default {
       main
     }
   },
+  methods:{
+    setDark(){
+      this.main.dark=!this.main.dark;
+      this.main.setDarkMode()
+      
+    }
+  },
   components: { Category }
 }
 </script>
@@ -27,7 +34,7 @@ export default {
           <div class="col-4">
             <div style="text-align: right;">
               <label class="switch">
-                <input type="checkbox" v-model="main.dark">
+                <input type="checkbox" v-model="main.dark" @click="this.setDark()">
                 <span class="slider round"></span>
               </label>
             </div>

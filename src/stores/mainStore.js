@@ -4,44 +4,29 @@ export const useMainStore = defineStore("defineStore",{
     state(){
         return{
             items: {
-                "Tarayıcı": [{
-                  name: "Chrome",
-                  img: "chromium.png",
-                  url: "https://www.google.com/intl/tr_tr/chrome/"
-                }, {
+                "Tarayıcı": [ {
                   name: "Chromium",
-                  img: "chromium.png",
+                  img: "chromium.svg",
                   url: "https://www.chromium.org/chromium-projects/"
+                },{
+                  name: "Chrome",
+                  img: "chrome.svg",
+                  url: "https://www.google.com/intl/tr_tr/chrome/"
                 },
                 {
                   name: "Firefox",
-                  img: "firefox.png",
+                  img: "firefox.svg",
                   url: "https://www.mozilla.org/tr/firefox/"
                 },
                 {
-                  name: "Opeta",
-                  img: "firefox.png",
-                  url: "#"
-                },
-                {
-                  name: "Sakari",
-                  img: "firefox.png",
-                  url: "#"
+                  name: "Opera",
+                  img: "opera.svg",
+                  url: "https://www.opera.com/tr"
                 },
                 {
                   name: "Brave",
                   img: "brave.png",
-                  url: "#"
-                },
-                {
-                  name: "Yandez",
-                  img: "firefox.png",
-                  url: "#"
-                },
-                {
-                  name: "Firefox",
-                  img: "firefox.png",
-                  url: "#"
+                  url: "https://brave.com/"
                 }],
                 "Ofis": [{
                   name: "Libre Office",
@@ -49,63 +34,68 @@ export const useMainStore = defineStore("defineStore",{
                   url: "https://www.libreoffice.org/"
                 },
                 {
-                  name: "Open Office",
-                  img: "Git-logo.svg",
-                  url: "#"
+                  name: "Apache OpenOffice",
+                  img: "openoffice.svg",
+                  url: "https://www.openoffice.org/tr/"
                 },
                 {
-                  name: "MS Office",
-                  img: "Git-logo.svg",
-                  url: "#"
+                  name: "Microsoft Office",
+                  img: "ms-off.svg",
+                  url: "https://www.office.com/"
                 }],
                 "Arşiv": [{
                   name: "WirRAR",
-                  img: "Git-logo.svg",
+                  img: "chromium.svg",
                   url: "#"
                 },
                 {
                   name: "WirZIP",
-                  img: "Git-logo.svg",
+                  img: "chromium.svg",
                   url: "#"
                 },
                 {
                   name: "8ZIP",
-                  img: "Git-logo.svg",
+                  img: "chromium.svg",
                   url: "#"
                 }],
                 "Video oynatıcılar": [{
                   name: "VLd Media Player",
-                  img: "Git-logo.svg",
+                  img: "chromium.svg",
                   url: "#"
                 }, {
                   name: "OGM Player",
-                  img: "Git-logo.svg",
+                  img: "chromium.svg",
                   url: "#"
                 },
                 {
                   name: "MPC",
-                  img: "Git-logo.svg",
+                  img: "chromium.svg",
                   url: "#"
                 }],
                 "Dev Tools": [{
                     name: "Git",
-                    img: "Git-logo.svg",
+                    img: "git.svg",
                     url: "https://git-scm.com/"
                   },{
                     name: "NodeJS",
-                    img: "Git-logo.svg",
-                    url: "#"
+                    img: "nodejs.png",
+                    url: "https://nodejs.org/en/"
                   }, {
                   name: "VSCode",
-                  img: "Git-logo.svg",
-                  url: "#"
+                  img: "vscode.svg",
+                  url: "https://code.visualstudio.com/"
                 }, {
-                  name: "Eclipse",
-                  img: "Git-logo.svg",
-                  url: "#"
+                  name: "Visual Studio",
+                  img: "ms-vs.svg",
+                  url: "https://visualstudio.microsoft.com/tr/"
                 }]
               },
-              dark: false
+              dark: JSON.parse(localStorage.getItem('darkMode'))
         }
+    },
+    actions:{
+      setDarkMode(){
+        localStorage.setItem('darkMode',JSON.stringify(this.dark));
+      }
     }
 })

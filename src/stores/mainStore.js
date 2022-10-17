@@ -88,6 +88,10 @@ export const useMainStore = defineStore("defineStore",{
                   name: "Visual Studio",
                   img: "ms-vs.svg",
                   url: "https://visualstudio.microsoft.com/tr/"
+                }, {
+                  name: "Postman",
+                  img: "ms-vs.svg",
+                  url: "https://visualstudio.microsoft.com/tr/"
                 }]
               },
               dark: JSON.parse(localStorage.getItem('darkMode'))
